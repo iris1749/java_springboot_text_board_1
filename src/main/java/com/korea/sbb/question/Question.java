@@ -2,6 +2,7 @@ package com.korea.sbb.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.korea.sbb.answer.Answer;
 import com.korea.sbb.user.SiteUser;
@@ -33,4 +34,8 @@ public class Question {
     private SiteUser author;
 
     private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
+
 }
